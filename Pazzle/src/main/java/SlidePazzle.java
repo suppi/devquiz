@@ -227,7 +227,7 @@ public class SlidePazzle {
 			Date limitDate = c.getTime();
 			Date startDate = new Date();
 			int low = start.getSearchDistance();
-			for (int i=60; i<90;i+=2) {
+			for (int i=low; i<90;i+=2) {
 				String ans = search(i, 0, start.getSpacePosition(), low);
 				if (ans != null) {
 					System.out.println("resolve time[" + startDate + "=>" + new Date() + "]");
@@ -280,7 +280,6 @@ public class SlidePazzle {
 					// 元に戻す
 					current.replace(adjace, spacePos);
 				}
-				break;
 			}
 			return null;
 		}
